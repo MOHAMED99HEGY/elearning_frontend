@@ -1,0 +1,110 @@
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الطالب - منصة التعليم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-student-dashboard">
+
+<header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+        <i class="fas fa-graduation-cap"></i>تنوير </div>  
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="courses.html">الدورات</a></li>
+                <li><a href="exams.html">الاختبارات</a></li>
+                <li><a href="results.html">النتائج</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+                <li><a href="register.html">إنشاء حساب</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="dashboard">
+    <div class="student-profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Student Icon">
+        <h2 id="studentNameDisplay">مرحبًا يا بطل 👋</h2>
+        <p class="welcome">جاهز تكمل رحلتك التعليمية؟ 💪📚</p>
+
+        <div class="progress-container">
+            <span>تقدمك الدراسي</span>
+            <div class="progress-bar">
+                <div id="progressBar" class="progress" style="width: 0%;"></div>
+            </div>
+            <p id="progressText">0% مكتمل ✅</p>
+        </div>
+    </div>
+
+    <h3>📚 الكورسات المسجل فيها</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>اسم الكورس</th>
+                <th>الحالة</th>
+                <th>الإجراء</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="course-name">أساسيات البرمجة</td>
+                <td class="status">جاري التعلم</td>
+                <td class="actions"><button class="btn">تابع التعلم</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">تصميم مواقع الويب</td>
+                <td class="status">غير مكتمل</td>
+                <td class="actions"><button class="btn">ابدأ الآن</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">تطوير تطبيقات الموبايل</td>
+                <td class="status">مكتمل ✅</td>
+                <td class="actions"><button class="btn">اعرض النتيجة</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">تصميم الجرافيك</td>
+                <td class="status">جاري التعلم</td>
+                <td class="actions"><button class="btn">تابع التعلم</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">المحاسبة المالية</td>
+                <td class="status">غير مكتمل</td>
+                <td class="actions"><button class="btn">ابدأ الآن</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">التسويق الالكتروني</td>
+                <td class="status">جاري التعلم</td>
+                <td class="actions"><button class="btn">تابع التعلم</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">تحليل البيانات</td>
+                <td class="status">مكتمل ✅</td>
+                <td class="actions"><button class="btn">اعرض النتيجة</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">التصميم ثلاثي الأبعاد</td>
+                <td class="status">غير مكتمل</td>
+                <td class="actions"><button class="btn">ابدأ الآن</button></td>
+            </tr>
+            <tr>
+                <td class="course-name">ICDL</td>
+                <td class="status">غير مكتمل</td>
+                <td class="actions"><button class="btn">ابدأ الآن</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<footer class="main-footer">
+    <div class="container footer-content">
+           <p>تنوير - جميع الحقوق محفوظة © 2026</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
