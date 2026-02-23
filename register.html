@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - المنصة التعليمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-register">
+    <section class="register-section">
+        <div class="register-container">
+            <h2>إنشاء حساب جديد</h2>
+            <form id="registerForm" onsubmit="return handleRegister(event)">
+                <div class="input-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">تأكيد كلمة المرور</label>
+                    <input type="password" id="confirm-password" placeholder="أعد إدخال كلمة المرور" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="userType">اختر النوع</label>
+                    <select id="userType" onchange="toggleTeacherFields()" required>
+                        <option value="" disabled selected>اختر نوع الحساب</option>
+                        <option value="student">طالب</option>
+                        <option value="teacher">مدرس</option>
+                    </select>
+                </div>
+
+                <div class="teacher-fields" id="teacherFields" style="display:none;">
+                    <div class="input-group">
+                        <label for="teacherCode">رمز المدرس</label>
+                        <input type="text" id="teacherCode" placeholder="أدخل الرمز الخاص بالمدرسين">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primary-btn">إنشاء الحساب</button>
+            </form>
+
+            <div class="register-link">
+                <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

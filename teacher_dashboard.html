@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة المدرس - منصة التعليم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-teacher-dashboard">
+
+<header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+        <i class="fas fa-graduation-cap"></i>تنوير </div>  
+    </div>
+</header>
+
+<section class="dashboard">
+
+    <div class="teacher-card">
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="teacher">
+            <h2 id="teacherNameDisplay">أهلاً مستر 👨‍🏫</h2>
+            <p id="teacherBioDisplay">جاهز تلهم طلابك اليوم؟ ✨</p>
+            <button class="btn-main" onclick="openModal('editProfileModal')">تعديل الملف الشخصي</button>
+        </div>
+
+        <div class="profile stats">
+            <h3>📊 إحصائيات سريعة:</h3>
+            <p>عدد الكورسات: <b>9</b></p>
+            <p>عدد الطلاب المسجلين: <b>132</b></p>
+            <p>طلبات الانضمام: <b>7</b></p>
+        </div>
+    </div>
+
+    <h3>📚 الكورسات الخاصة بك</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>اسم الكورس</th>
+                <th>عدد الطلاب</th>
+                <th>الحالة</th>
+                <th>الإجراء</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>مقدمة في HTML</td>
+                <td>25</td>
+                <td>مستمر</td>
+                <td><button class="btn" onclick="manageCourse('مقدمة في HTML')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>أساسيات CSS</td>
+                <td>18</td>
+                <td>غير مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('أساسيات CSS')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>مقدمة في قواعد البيانات</td>
+                <td>30</td>
+                <td>مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('مقدمة في قواعد البيانات')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>أساسيات JavaScript</td>
+                <td>22</td>
+                <td>مستمر</td>
+                <td><button class="btn" onclick="manageCourse('أساسيات JavaScript')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>تصميم واجهات المستخدم</td>
+                <td>15</td>
+                <td>غير مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('تصميم واجهات المستخدم')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>تحليل البيانات</td>
+                <td>12</td>
+                <td>مستمر</td>
+                <td><button class="btn" onclick="manageCourse('تحليل البيانات')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>التصميم ثلاثي الابعاد</td>
+                <td>20</td>
+                <td>مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('التصميم ثلاثي الابعاد')">إدارة الكورس</button></td>
+            </tr>
+            <tr>
+                <td>التسويق الالكتروني</td>
+                <td>10</td>
+                <td>غير مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('التسويق الالكتروني')">إدارة الكورس</button></td>
+            </tr>
+             <tr>
+                <td>ICDL</td>
+                <td>10</td>
+                <td>غير مكتمل</td>
+                <td><button class="btn" onclick="manageCourse('ICDL')">إدارة الكورس</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+<div class="cards">
+    <div class="card">
+        <h3>📤 رفع المحاضرات</h3>
+        <p>إضافة فيديوهات ومواد تعليمية</p>
+        <button class="btn" onclick="action('video')">إضافة الآن</button>
+    </div>
+    
+    <div class="card">
+        <h3>📝 رفع الامتحانات</h3>
+        <p>أضف اختبارات تقييمية جديدة لطلابك</p>
+        <button class="btn" onclick="action('exam')">إضافة الآن</button>
+    </div>
+    
+    <div class="card">
+        <h3>💬 الرسائل والإشعارات</h3>
+        <p>تواصل مع طلابك بسهولة</p>
+        <button class="btn" onclick="action('msg')">افتح الرسائل</button>
+    </div>
+</div>
+
+</section>
+
+<div id="editProfileModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('editProfileModal')">&times;</span>
+        <h3>👤 تعديل الملف الشخصي</h3>
+        <input type="text" id="newNameInput" placeholder="أدخل اسمك الجديد">
+        <input type="text" id="newBioInput" placeholder="أدخل تخصصك أو كلمة للطلاب">
+        <button class="btn-main" onclick="saveProfileChanges()">حفظ التعديلات</button>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+        تنوير  - جميع الحقوق محفوظة © 2026
+    </div>
+     
+</footer>
+
+<script src="js/script.js"></script>
+<div id="lectureModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('lectureModal')">&times;</span>
+        <h3>📤 رفع محاضرة جديدة</h3>
+        <input type="text" placeholder="عنوان الفيديو">
+        <button class="btn-main" onclick="alert('تم رفع المحاضرة بنجاح!'); closeModal('lectureModal')">رفع الآن</button>
+    </div>
+</div>
+
+<div id="examModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('examModal')">&times;</span>
+        <h3>📝 إنشاء امتحان</h3>
+        <input type="text" placeholder="اسم الامتحان">
+        <button class="btn-main" onclick="alert('تم إنشاء الامتحان!'); closeModal('examModal')">إنشاء</button>
+    </div>
+</div>
+
+<div id="messagesModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('messagesModal')">&times;</span>
+        <h3>💬 الرسائل الواردة</h3>
+        <p style="text-align:right; border-bottom:1px solid #eee; padding:10px;">لا توجد رسائل جديدة حالياً.</p>
+        <button class="btn-main" onclick="closeModal('messagesModal')">إغلاق</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1765 @@
+/* خطوط وألوان عامة */
+:root {
+  --primary-color: #3B0A45; /* بنفسجي غامق - الأساسي */
+  --secondary-color: #FFC107; /* أصفر / ذهبي - الثانوي */
+  --light-bg: #f0f2f5; /* لون الخلفية الفاتح */
+  --text-color: #333;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  direction: rtl; /* لضمان دعم اللغة العربية بشكل كامل */
+  text-align: right;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* الخلفية المائلة للرمادي (لتكسير اللون الأبيض) */
+.grey-bg {
+    background-color: #f7f9fc; 
+}
+
+/* الهيدر */
+.main-header {
+  background-color: var(--primary-color); 
+  color: white;
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo i {
+  color: #ffa500; 
+  font-size: 48px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+  /* هنا يجب أن يكون مسار الصورة hero.png صحيحاً */
+  background: url('images/hero.png') no-repeat center center/cover;
+  height: 350px; /* زيادة الطول قليلاً */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before { /* استخدام before بدلاً من after لتطبيق التعتيم */
+  content: '';
+  position: absolute;
+  top:0; right:0;
+  width:100%; height:100%;
+  background-color: rgba(0,0,0,0.5); /* تعتيم أغمق قليلاً */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn {
+  margin: 0 10px;
+  padding: 12px 30px;
+  border-radius: 50px; /* جعل الأزرار دائرية أكثر */
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.primary-btn:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* About Section */
+.about-platform p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-platform ul {
+  list-style: none;
+  display: inline-block;
+  text-align: right;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.about-platform ul li {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.about-platform ul li i {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+/* خطوات البدء (Start Steps) */
+.start-steps h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 30px;
+    border-top: 1px dashed #ddd;
+    padding-top: 30px;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.step-card i {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.step-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card General Style */
+.card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: right;
+  border-bottom: 5px solid var(--secondary-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Features Section */
+.feature-card i {
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- تعديلات قسم الدورات --- */
+.course-card .btn {
+    width: 5%;
+    margin-top: 20px;
+}
+
+/* تنسيق تفاصيل الدورة الجديدة (التقييم وعدد الطلاب) */
+.course-meta {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.meta-item {
+    font-size: 15px;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+}
+
+/* لون أيقونة النجمة - اللون الذهبي */
+.rating-icon {
+    color: var(--secondary-color); 
+    margin-left: 5px;
+}
+
+/* لون أيقونة المستخدمين */
+.students-icon {
+    color: var(--primary-color); 
+    margin-left: 5px;
+}
+
+/* --- تعديلات قسم آراء الطلاب --- */
+
+/* استخدام كلاس مخصص لبطاقة الرأي */
+.testimonial-container {
+    max-width: 1800px;
+}
+
+.testimonial-card {
+    border-right: 5px solid var(--secondary-color); /* شريط جانبي بلون المنصة الثانوي */
+    padding: 25px;
+    text-align: right;
+}
+
+/* تنسيق أيقونة الاقتباس */
+.quote-icon {
+    color: var(--primary-color); 
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* تنسيق نص الرأي */
+.review-text {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* تنسيق معلومات المراجع (الاسم والأيقونة) */
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    border-top: 1px dashed #e0e0e0; 
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.avatar-icon {
+    font-size: 22px;
+    color: #6c757d; 
+    margin-left: 10px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    color: var(--primary-color); 
+    font-size: 16px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0; 
+    margin-top: 50px;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* أيقونات السوشيال */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Responsive Design (لأجهزة الجوال) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 10px;
+        padding: 0;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn {
+        width: 80%;
+        margin: 5px auto;
+    }
+    section {
+        padding: 40px 15px;
+    }
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step-card {
+        width: 100%;
+    }
+}
+
+/* قسم الدروس */
+.lessons-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.lessons-section h2 {
+  font-size: 32px;
+  color: #3B0A45;
+  margin-bottom: 10px;
+}
+
+.lessons-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* الحاوية والكورسات */
+.lesson-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+
+/* كل كورس */
+.lesson-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.lesson-card h3 {
+  color: #3B0A45;
+  margin-top: 15px;
+}
+
+.lesson-card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* iframe الفيديو */
+.lesson-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* الفوتر */
+footer {
+  background-color: #3B0A45;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+/* صفحة الكورسات */
+.courses-page .course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 مربعات في الصف */
+    gap: 25px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الكارد + إطار أصفر + حجم أصغر */
+.courses-page .course {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 15px 15px; /* تقليل الحشو */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease-in-out;
+    border: 3px solid #f4d03f; /* الإطار الأصفر */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 300px; /* تصغير الكارد قليلًا */
+}
+
+/* محتوى داخلي متوازن داخل الكارد */
+.courses-page .course-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع الصورة + نص + زرار */
+    height: 100%;
+}
+
+/* الصورة */
+.courses-page .course img {
+    width: 100%;
+    height: 150px; /* تقليل ارتفاع الصورة قليلاً */
+    object-fit: auto; /* الصورة كاملة بدون قص */
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* الهوفر */
+.courses-page .course:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* عنوان الكورس */
+.courses-page .course h3 {
+    font-size: 22px;
+    color: #3B0A45;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* وصف الكورس */
+.courses-page .course p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* زرار "ابدأ الآن" */
+.courses-page .course .primary-btn {
+    padding: 10px 18px;
+    background: #3B0A45;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* صفحة الدروس */
+.lessons-section .lesson-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 مربعات في الصف */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* كل كارد درس */
+.lessons-section .lesson-card {
+    background-color: #fff; /* خلفية بيضاء */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 3px solid #f4d03f; /* الإطار الأصفر من برّه */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 350px; /* حجم مشابه للكورسات */
+}
+
+/* هوفر للكارد */
+.lessons-section .lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* الصورة */
+.lessons-section .lesson-card img {
+    width: 100%;   /* عرض كامل الكارد */
+    height: auto;  /* حجم طبيعي بدون قص */
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* عنوان الكورس */
+.lessons-section .lesson-card h3 {
+    color: #3B0A45;
+    margin: 10px 0;
+}
+
+/* وصف الدرس */
+.lessons-section .lesson-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* iframe الفيديو */
+.lessons-section .lesson-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* إضافة: عناوين الدروس القابلة للضغط */
+.lesson-title {
+    cursor: pointer;
+    color: #3B0A45;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+/* إضافة: إخفاء الفيديوهات في البداية */
+.lesson-video {
+    display: none;
+    margin-top: 10px;
+}
+
+/* الفوتر */
+footer {
+    background-color: #3B0A45;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+/* صفحة إنشاء الحساب فقط */
+body.page-register .register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+body.page-register .register-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+body.page-register .register-container h2 {
+    color: #3B0A45;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+body.page-register .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+body.page-register .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #3B0A45;
+}
+
+body.page-register .input-group input,
+body.page-register .input-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+body.page-register .input-group input:focus,
+body.page-register .input-group select:focus {
+    border-color: #5C0F63;
+}
+
+body.page-register .btn.primary-btn {
+    width: 100%;
+    background-color: #3B0A45;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-register .btn.primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+body.page-register .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+body.page-register .register-link a {
+    color: #3B0A45;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.page-register .register-link a:hover {
+    text-decoration: underline;
+}
+
+body.page-register .teacher-fields {
+    margin-top: 15px;
+}
+
+/* صفحة تسجيل الدخول فقط */
+body.page-login .login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+body.page-login .login-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+body.page-login .login-container h2 {
+    color: #3B0A45;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+body.page-login .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+body.page-login .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #3B0A45;
+}
+
+body.page-login .input-group input,
+body.page-login .input-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+body.page-login .input-group input:focus,
+body.page-login .input-group select:focus {
+    border-color: #5C0F63;
+}
+
+body.page-login .btn.primary-btn {
+    width: 100%;
+    background-color: #3B0A45;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-login .btn.primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+body.page-login .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+body.page-login .login-link a {
+    color: #3B0A45;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.page-login .login-link a:hover {
+    text-decoration: underline;
+}
+/* صفحة تواصل معنا */
+body.page-contact .contact-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+}
+
+body.page-contact .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+body.page-contact .contact-container h2 {
+    color: #3B0A45;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+body.page-contact .contact-container p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+body.page-contact .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+body.page-contact .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #3B0A45;
+}
+
+body.page-contact .input-group input,
+body.page-contact .input-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+body.page-contact .input-group input:focus,
+body.page-contact .input-group textarea:focus {
+    border-color: #5C0F63;
+}
+
+body.page-contact .btn.primary-btn {
+    background-color: #3B0A45;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-contact .btn.primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+/* وسائل التواصل الاجتماعي */
+body.page-contact .contact-extra {
+    margin-top: 40px;
+    text-align: center;
+}
+
+body.page-contact .contact-extra h3 {
+    color: #3B0A45;
+    margin-bottom: 15px;
+}
+
+body.page-contact .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px 10px 10px;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #3B0A45;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+body.page-contact .social-icons a i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+body.page-contact .social-icons a:hover {
+    background-color: #3B0A45;
+    color: #fff;
+}
+
+/* الخريطة */
+body.page-contact .map-container {
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+body.page-contact .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+/* صفحة الاختبارات */
+body.page-exams .exams-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+}
+
+body.page-exams .exams-section h2 {
+    text-align: center;
+    color: #3B0A45;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+body.page-exams .exams-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* ===== تعديل تنسيق الكروت داخل الحاوية ===== */
+body.page-exams .exam-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* رفع الحد الأدنى للبطاقة */
+    gap: 30px; /* مسافة أكبر بين البطاقات */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; /* مسافة جانبية صغيرة */
+}
+
+/* ===== البطاقات ===== */
+body.page-exams .exam-card {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.page-exams .exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+body.page-exams .exam-card h3 {
+    color: #3B0A45;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+body.page-exams .exam-card p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* زر ابدأ الاختبار */
+body.page-exams .exam-card .btn.primary-btn {
+    background-color: #3B0A45;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-exams .exam-card .btn.primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+/* فوتر */
+body.page-exams footer {
+    padding: 20px 0;
+    background-color: #3B0A45;
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}
+/* صفحة النتائج */
+body.page-results .results-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+}
+
+body.page-results .results-section h2 {
+    text-align: center;
+    color: #3B0A45;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+body.page-results .results-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+body.page-results .results-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.page-results .result-card {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.page-results .result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+body.page-results .result-card h3 {
+    color: #3B0A45;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+body.page-results .result-card p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+body.page-results .result-card .btn.primary-btn {
+    background-color: #3B0A45;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.page-results .result-card .btn.primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+/* فوتر */
+body.page-results footer {
+    padding: 20px 0;
+    background-color: #3B0A45;
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}
+/* ----- لوحة المدير ----- */
+body.page-admin-dashboard {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-header {
+    background-color: #3B0A45;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.admin-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.admin-card .profile {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.admin-card .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.admin-card .profile h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.admin-card .profile p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.admin-card .profile .btn.primary-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.admin-card .stats {
+    flex: 1 1 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.admin-card .stats p {
+    font-size: 16px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card .btn.primary-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #3B0A45;
+    color: white;
+    margin-top: 40px;
+}
+/* ----- لوحة الطالب ----- */
+body.page-student-dashboard {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.student-profile {
+    text-align: center;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.student-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.student-profile h2 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+}
+
+.student-profile .welcome {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin-top: 15px;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-container span {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    background-color: #3B0A45;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table th {
+    background-color: #3B0A45;
+    color: white;
+    font-weight: 500;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.course-name {
+    font-weight: 500;
+}
+
+.status {
+    font-size: 14px;
+    color: #333;
+}
+
+.actions .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #3B0A45;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions .btn:hover {
+    background-color: #5C0F63;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #3B0A45;
+    color: white;
+    margin-top: 40px;
+}
+/* ===========================
+   الخطوط العامة
+=========================== */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2, h3 {
+    margin: 0.5em 0;
+}
+
+/* ===========================
+   الهيدر
+=========================== */
+.main-header {
+    background-color: #3B0A45;
+    color: white;
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+}
+
+/* ===========================
+   الأزرار العامة
+=========================== */
+.btn, .btn-main, .primary-btn {
+    background-color: #3B0A45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover, .btn-main:hover, .primary-btn:hover {
+    background-color: #5C0F63;
+}
+
+/* ===========================
+   لوحات الطالب والمدرس
+=========================== */
+.dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.dashboard img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.student-profile, .teacher-card, .admin-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #3B0A45;
+    height: 100%;
+    width: 0;
+}
+
+/* ===========================
+   جدول الكورسات
+=========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #3B0A45;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.course-name {
+    font-weight: 600;
+}
+
+/* ===========================
+   بطاقات الإدارة والكروت
+=========================== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 calc(50% - 20px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   فوتر
+=========================== */
+.main-footer, footer {
+    background-color: #3B0A45;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* ===========================
+   تفاعل صفحات أخرى مثل الامتحانات والنتائج
+=========================== */
+.exam-container, .results-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.exam-card, .result-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.exam-card h3, .result-card h3 {
+    margin-bottom: 10px;
+}
+
+.exam-card p, .result-card p {
+    margin-bottom: 15px;
+}
+/* === Responsive لجميع أحجام الشاشات === */
+
+/* الموبايل: أقل من 768px */
+@media (max-width: 768px) {
+  /* أي grid يتحول لعمود واحد */
+  .lessons-section .lesson-cards,
+  .courses-section .course-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* الفيديوهات أصغر */
+  iframe {
+    height: 180px;
+  }
+
+  /* النصوص أصغر شويه */
+  h1, h2, h3 {
+    font-size: smaller;
+  }
+
+  /* القوائم في الهيدر عمودية */
+  nav ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* التابلت: بين 769px و1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lessons-section .lesson-cards,
+  .courses-section .course-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* شاشة أكبر: 1025px وأعلى (لابتوب) - تقدر تخلي 3 كروت في الصف زي ما عندك */
+@media (min-width: 1025px) {
+  .lessons-section .lesson-cards,
+  .courses-section .course-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
+/* السطر ده هيخلي الحاوية تسمح بالسنترة */
+.lesson-cards {
+  display: flex !important; 
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+
+/* السطر ده هيصغر الكارت ويوسطنه بالمللي */
+.lesson-card {
+  width: 100% !important;
+  max-width: 400px !important; /* خلاه كنز زي الدورات */
+  margin: 20px auto !important; /* خلاه في النص بالظبط */
+  float: none !important; /* لغى مفعول أي ركنة يمين */
+}
+
+/* السطر ده عشان الدرس والقفل يبقوا مسطرة مش فوق بعض */
+.lesson-title {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+/* --- تنسيق نافذة تعديل الملف الشخصي (Modal) --- */
+
+/* الخلفية المغطية للشاشة بالكامل */
+.modal {
+    display: none; /* مخفية افتراضياً */
+    position: fixed; 
+    z-index: 9999; /* عشان تظهر فوق كل حاجة */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); /* سواد شفاف */
+    backdrop-filter: blur(5px); /* تأثير غبش للخلفية زي المواقع المحترفة */
+}
+
+/* الصندوق الأبيض اللي فيه البيانات */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* عرض مناسب للموبايل والكمبيوتر */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in-out; /* حركة دخول ناعمة */
+}
+
+/* زرار الإغلاق (X) */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+/* تنسيق خانات الكتابة جوه النافذة */
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Tajawal', sans-serif;
+    outline: none;
+    box-sizing: border-box; /* عشان الـ padding ميزودش العرض */
+}
+
+.modal-content input:focus {
+    border-color: #007bff;
+}
+
+/* تأثير حركة ظهور النافذة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+.question {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    text-align: center; /* السؤال في الوسط */
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* تنسيق كل خيار */
+.question label {
+    display: flex;
+    flex-direction: column; /* الدائرة فوق النص */
+    align-items: center;    /* توسيط الدائرة والنص */
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    margin-bottom: 5px; /* مسافة بين الدائرة والكلام */
+}
+/* حل مشكلة الشريط اللي في نص الشاشة */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* بيخلي الصفحة تاخد طول الشاشة بالكامل */
+    margin: 0;
+}
+
+.main-header {
+    flex-shrink: 0; /* الهيدر يفضل مكانه فوق */
+}
+
+.results-section, .exams-section {
+    flex: 1 0 auto; /* بيخلي جزء المحتوى يزق الفوتر لتحت */
+}
+
+.main-footer {
+    flex-shrink: 0; /* الفوتر يفضل ثابت تحت */
+    width: 100%;
+}
