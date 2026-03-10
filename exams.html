@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ar">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>الاختبارات - مرشد التعلم</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+</head>  
+<body class="page-exams">  <header class="main-header">  
+    <div class="container header-content">  
+        <div class="logo">  
+            <i class="fas fa-graduation-cap"></i>تنوير  
+        </div>  
+        <nav>  
+            <ul class="nav-links">  
+                <li><a href="index.html">الرئيسية</a></li>  
+                <li><a href="courses.html">الدورات</a></li>  
+                <li><a href="exams.html">الاختبارات</a></li>  
+                <li><a href="login.html">تسجيل الدخول</a></li>  
+                <li><a href="register.html">إنشاء حساب</a></li>  
+                <li><a href="contact.html">تواصل معنا</a></li>  
+            </ul>  
+        </nav>  
+    </div>  
+</header>  <section class="exams-section">  
+    <div class="container">  
+        <h2>الاختبارات المتاحة</h2>  
+        <p>اختر الاختبار المناسب وابدأ تقييم مستواك الآن.</p>  <div class="exam-container">  
+
+        <div class="exam-card">  
+            <h3>اختبار أساسيات البرمجة</h3>  
+            <p>قيّم معلوماتك الأساسية في البرمجة ب ++c.</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="أساسيات البرمجة">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار تصميم مواقع الويب</h3>  
+            <p>اختبر مهاراتك في HTML و CSS و JavaScript.</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="تصميم مواقع الويب">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار تطوير تطبيقات الموبايل</h3>  
+            <p>قيّم قدرتك على بناء تطبيقات حديثة.</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="تطوير تطبيقات الموبايل">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار تصميم الجرافيك</h3>  
+            <p>اختبر معلوماتك و مهاراتك في الفوتوشوب .</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="تصميم الجرافيك">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار المحاسبة المالية</h3>  
+            <p>قيّم معرفتك بمبادئ المحاسبة المالية .</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="المحاسبة المالية">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار التسويق الالكتروني</h3>  
+            <p>اختبر معرفتك باستراتيجيات التسويق .</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="التسويق الالكتروني">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار تحليل البيانات</h3>  
+            <p>قيّم معرفتك بمفاهيم تخاليل البيانات .</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="تحليل البيانات">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار التصميم ثلاثي الابعاد</h3>  
+            <p>اختبر قدرتك على التصميم ثلاثي الابعاد.</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="التصميم ثلاثي الابعاد">ابدأ الاختبار</button>  
+        </div>  
+
+        <div class="exam-card">  
+            <h3>اختبار ICDL</h3>  
+            <p>اختبر قدرتك في اساسيات الحاسب الالي.</p>  
+            <button class="btn primary-btn start-exam-btn" data-course="ICDL">ابدأ الاختبار</button>  
+        </div>  
+
+    </div>  
+
+      
+   <!-- الامتحان (مخفي) -->
+<div id="exam-section" style="display:none; margin-top:40px;">  
+  <h2 id="exam-title"></h2>  
+
+  <!-- امتحان أساسيات البرمجة -->
+  <div id="exam-programming" class="exam-box" style="display:none;">
+    <form>
+      <div class="question">  
+        <p>1- ما هي الطريقة الصحيحة لتعريف متغير عدد صحيح في C++؟</p>  
+        <label><input type="radio" name="q1" value="float"> float</label><br>  
+        <label><input type="radio" name="q1" value="string"> string</label><br> 
+        <label><input type="radio" name="q1" value="int"> int</label><br>
+      </div>  
+
+      <div class="question">  
+        <p>2- أي من هذه العبارات تُستخدم لإدخال البيانات من المستخدم؟</p>  
+        <label><input type="radio" name="q2" value="cin"> cin</label><br>  
+        <label><input type="radio" name="q2" value="cout"> cout</label><br>  
+        <label><input type="radio" name="q2" value="endl"> endl</label><br>  
+      </div>  
+
+      <div class="question">  
+        <p>3- أي من هذه العبارات تُستخدم لطباعة البيانات على الشاشة؟</p>  
+        <label><input type="radio" name="q3" value="cin"> cin</label><br>  
+        <label><input type="radio" name="q3" value="cout"> cout</label><br>  
+        <label><input type="radio" name="q3" value="return"> return</label><br>
+      </div>  
+
+      <div class="question">  
+        <p>4- ما نوع البيانات الذي يخزن الأرقام العشرية في C++؟</p>  
+        <label><input type="radio" name="q4" value="int"> int</label><br>  
+        <label><input type="radio" name="q4" value="char"> char</label><br> 
+        <label><input type="radio" name="q4" value="float"> float</label><br>
+      </div>  
+
+      <div class="question">  
+        <p>5- أي من هذه الكلمات المفتاحية تُستخدم لإنهاء دالة في C++؟</p>  
+        <label><input type="radio" name="q5" value="break"> break</label><br>  
+        <label><input type="radio" name="q5" value="return"> return</label><br>  
+        <label><input type="radio" name="q5" value="continue"> continue</label><br>
+      </div>
+
+      <div class="question">  
+        <p>6- في C++ يمكن استخدام الكلمة المفتاحية "return" لإنهاء دالة؟</p>  
+        <label><input type="radio" name="q6" value="true"> True</label><br>  
+        <label><input type="radio" name="q6" value="false"> False</label><br>  
+      </div>
+
+      <div class="question">  
+        <p>7- الكلمة المفتاحية "continue" تُستخدم لإنهاء الحلقة فوراً؟</p>  
+        <label><input type="radio" name="q7" value="true"> True</label><br>  
+        <label><input type="radio" name="q7" value="false"> False</label><br>  
+      </div>
+
+      <div class="question">  
+        <p>8- في C++، "//" تُستخدم للتعليقات متعددة الأسطر؟</p>  
+        <label><input type="radio" name="q8" value="true"> True</label><br>  
+        <label><input type="radio" name="q8" value="false"> False</label><br>  
+      </div>
+
+      <div class="question">  
+        <p>9- يمكن استخدام الكلمة المفتاحية "break" للخروج من الحلقة فوراً؟</p>  
+        <label><input type="radio" name="q9" value="true"> True</label><br>  
+        <label><input type="radio" name="q9" value="false"> False</label><br>  
+      </div>
+
+      <div class="question">  
+        <p>10- في C++، جميع المتغيرات يجب أن تُعلن قبل استخدامها؟</p>  
+        <label><input type="radio" name="q10" value="true"> True</label><br>  
+        <label><input type="radio" name="q10" value="false"> False</label><br>  
+      </div>
+    </form>
+  </div>
+
+  <!-- امتحان تصميم مواقع الويب -->
+  <div id="exam-web" class="exam-box" style="display:none;">
+    <form>
+     <div class="question">
+    <p>1- ما هو الوسم الصحيح لإنشاء رابط في HTML؟</p>
+    <label><input type="radio" name="q1" value="a"> &lt;a&gt;</label><br>
+    <label><input type="radio" name="q1" value="b"> &lt;link&gt;</label><br>
+    <label><input type="radio" name="q1" value="c"> &lt;href&gt;</label><br>
+</div>
+
+<div class="question">
+    <p>2- أي من هذه الخصائص تُستخدم لتغيير لون الخلفية في CSS؟</p>
+    <label><input type="radio" name="q2" value="a"> color</label><br>
+    <label><input type="radio" name="q2" value="b"> font-color</label><br>
+    <label><input type="radio" name="q2" value="c"> background-color</label><br>
+</div>
+
+<div class="question">
+    <p>3- أي وسم يُستخدم لإدراج صورة في HTML؟</p>
+    <label><input type="radio" name="q3" value="a"> &lt;picture&gt;</label><br>
+    <label><input type="radio" name="q3" value="b"> &lt;image&gt;</label><br>
+    <label><input type="radio" name="q3" value="c"> &lt;img&gt;</label><br>
+</div>
+
+<div class="question">
+    <p>4- ما هو الاختصار الصحيح لكتابة التعليقات في CSS؟</p>
+    <label><input type="radio" name="q4" value="a"> // تعليق</label><br>
+    <label><input type="radio" name="q4" value="b"> /* تعليق */</label><br>
+    <label><input type="radio" name="q4" value="c"> &lt;!-- تعليق --&gt;</label><br>
+</div>
+
+<div class="question">
+    <p>5- أي من هذه الوسوم يُستخدم لإنشاء جدول في HTML؟</p>
+    <label><input type="radio" name="q5" value="a"> &lt;table&gt;</label><br>
+    <label><input type="radio" name="q5" value="b"> &lt;tr&gt;</label><br>
+    <label><input type="radio" name="q5" value="c"> &lt;td&gt;</label><br>
+</div>
+
+<div class="question">
+    <p>6- وسم &lt;h2&gt; يُستخدم لإنشاء عنوان فرعي في صفحة HTML؟</p>
+    <label><input type="radio" name="q6" value="true"> True</label><br>
+    <label><input type="radio" name="q6" value="false"> False</label><br>
+</div>
+
+<div class="question">
+    <p>7- الخاصية CSS "padding" تتحكم في المسافة الداخلية داخل العنصر؟</p>
+    <label><input type="radio" name="q7" value="true"> True</label><br>
+    <label><input type="radio" name="q7" value="false"> False</label><br>
+</div>
+
+<div class="question">
+    <p>8- وسم &lt;img&gt; يُستخدم لإضافة مقاطع فيديو إلى الصفحة؟</p>
+    <label><input type="radio" name="q8" value="true"> True</label><br>
+    <label><input type="radio" name="q8" value="false"> False</label><br>
+</div>
+
+<div class="question">
+    <p>9- الخاصية CSS "font-weight" تتحكم في سماكة النص؟</p>
+    <label><input type="radio" name="q9" value="true"> True</label><br>
+    <label><input type="radio" name="q9" value="false"> False</label><br>
+</div>
+
+<div class="question">
+    <p>10- وسم &lt;br&gt; يُستخدم لإنشاء سطر جديد في HTML؟</p>
+    <label><input type="radio" name="q10" value="true"> True</label><br>
+    <label><input type="radio" name="q10" value="false"> False</label><br>
+</div>
+    </form>
+  </div>
+
+<!-- امتحان تطوير تطبيقات الموبايل -->
+<div id="exam-mobile" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- أي لغة تُستخدم بشكل رئيسي لتطوير تطبيقات Android؟</p>
+      <label><input type="radio" name="q1" value="a"> Java</label><br>
+      <label><input type="radio" name="q1" value="b"> Swift</label><br>
+      <label><input type="radio" name="q1" value="c"> C#</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي لغة تُستخدم بشكل رئيسي لتطوير تطبيقات iOS؟</p>
+      <label><input type="radio" name="q2" value="a"> Kotlin</label><br>
+      <label><input type="radio" name="q2" value="b"> Swift</label><br>
+      <label><input type="radio" name="q2" value="c"> Java</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- أي من هذه المنصات تُستخدم لتطوير تطبيقات متعددة المنصات؟</p>
+      <label><input type="radio" name="q3" value="a"> Flutter</label><br>
+      <label><input type="radio" name="q3" value="b"> Xcode</label><br>
+      <label><input type="radio" name="q3" value="c"> Android Studio فقط</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- ما هو الملف الرئيسي لتطبيق Android؟</p>
+      <label><input type="radio" name="q4" value="a"> AppDelegate.swift</label><br>
+      <label><input type="radio" name="q4" value="b"> index.html</label><br>
+      <label><input type="radio" name="q4" value="c"> MainActivity.java / MainActivity.kt</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- أي إطار عمل يُستخدم لتطوير واجهات رسومية في iOS؟</p>
+      <label><input type="radio" name="q5" value="a"> React Native فقط</label><br>
+      <label><input type="radio" name="q5" value="b"> UIKit</label><br>
+      <label><input type="radio" name="q5" value="c"> Material Design</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- يمكن استخدام Flutter لتطوير تطبيق يعمل على Android و iOS معاً؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- Swift تُستخدم لتطوير تطبيقات Android؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- Android Studio هو محرر وبيئة تطوير متكاملة لتطبيقات Android؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- React Native يسمح بتطوير تطبيقات موبايل باستخدام JavaScript؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- لتطوير تطبيقات iOS، يجب استخدام Xcode على نظام macOS؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان تصميم الجرافيك -->
+<div id="exam-graphic" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- أي برنامج يُستخدم بشكل رئيسي لتحرير الصور الرقمية؟</p>
+      <label><input type="radio" name="q1" value="a"> Adobe Illustrator</label><br>
+      <label><input type="radio" name="q1" value="b"> Adobe Photoshop</label><br>
+      <label><input type="radio" name="q1" value="c"> Adobe Premiere</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي برنامج يُستخدم بشكل رئيسي لتصميم الرسوميات المتجهة (Vector Graphics)؟</p>
+      <label><input type="radio" name="q2" value="a"> Adobe Photoshop</label><br>
+      <label><input type="radio" name="q2" value="b"> Corel VideoStudio</label><br>
+      <label><input type="radio" name="q2" value="c"> Adobe Illustrator</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- أي من هذه الصيغ تُستخدم للصور المتجهة (Vector)؟</p>
+      <label><input type="radio" name="q3" value="a"> .AI</label><br>
+      <label><input type="radio" name="q3" value="b"> .JPG</label><br>
+      <label><input type="radio" name="q3" value="c"> .PNG</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- أي أداة في Photoshop تُستخدم لتحديد جزء من الصورة؟</p>
+      <label><input type="radio" name="q4" value="a"> Pen Tool</label><br>
+      <label><input type="radio" name="q4" value="b"> Type Tool</label><br>
+      <label><input type="radio" name="q4" value="c"> Lasso Tool</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- أي من هذه الألوان يُمثل اللون الأساسي في نظام الألوان RGB؟</p>
+      <label><input type="radio" name="q5" value="a"> أحمر، أخضر، أزرق</label><br>
+      <label><input type="radio" name="q5" value="b"> أحمر، أصفر، أزرق</label><br>
+      <label><input type="radio" name="q5" value="c"> أسود، أبيض، رمادي</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- في التصميم الجرافيكي، الصور النقطية (Raster) تفقد جودتها عند تكبيرها؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- اللون CMYK يُستخدم عادةً للشاشات الرقمية؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- Adobe InDesign يُستخدم لتصميم المطبوعات والنشرات؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- استخدام الطبقات (Layers) في Photoshop يُسهل تحرير عناصر محددة دون التأثير على باقي التصميم؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- صيغة PNG تدعم الخلفيات الشفافة؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان المحاسبة المالية -->
+<div id="exam-finance" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- ما هو تعريف الأصول في المحاسبة؟</p>
+      <label><input type="radio" name="q1" value="a"> الموارد الاقتصادية التي تمتلكها الشركة</label><br>
+      <label><input type="radio" name="q1" value="b"> الالتزامات المالية للشركة</label><br>
+      <label><input type="radio" name="q1" value="c"> الإيرادات الناتجة عن المبيعات</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي من القوائم المالية التالية تعرض الوضع المالي للشركة في تاريخ محدد؟</p>
+      <label><input type="radio" name="q2" value="a"> قائمة الدخل</label><br>
+      <label><input type="radio" name="q2" value="b"> الميزانية العمومية (Balance Sheet)</label><br>
+      <label><input type="radio" name="q2" value="c"> قائمة التدفقات النقدية</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- الإيرادات هي:</p>
+      <label><input type="radio" name="q3" value="a"> الأموال المدفوعة للموظفين</label><br>
+      <label><input type="radio" name="q3" value="b"> الأموال المكتسبة من بيع السلع أو الخدمات</label><br>
+      <label><input type="radio" name="q3" value="c"> المصروفات التشغيلية</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- الخصوم (Liabilities) تعني:</p>
+      <label><input type="radio" name="q4" value="a"> الديون والالتزامات التي على الشركة سدادها</label><br>
+      <label><input type="radio" name="q4" value="b"> الأصول الثابتة للشركة</label><br>
+      <label><input type="radio" name="q4" value="c"> الأرباح المتراكمة</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- قائمة التدفقات النقدية تُظهر:</p>
+      <label><input type="radio" name="q5" value="a"> إجمالي الأرباح والخسائر</label><br>
+      <label><input type="radio" name="q5" value="b"> عدد الموظفين في الشركة</label><br>
+      <label><input type="radio" name="q5" value="c"> التدفقات الداخلة والخارجة للنقد خلال فترة زمنية</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- الأرباح = الإيرادات − المصروفات؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- الأصول المتداولة هي الأصول التي يمكن تحويلها إلى نقد خلال سنة واحدة؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- المصروفات هي الأموال التي تتلقاها الشركة من العملاء؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- الميزانية العمومية تُظهر الأصول، الخصوم، وحقوق الملكية؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- المحاسبة المالية تهتم بتحليل الأداء المالي للشركة فقط للداخلاء الداخليين مثل الإدارة؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان التسويق الرقمي -->
+<div id="exam-digital-marketing" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- ما هو SEO في التسويق الرقمي؟</p>
+      <label><input type="radio" name="q1" value="a"> إدارة وسائل التواصل الاجتماعي</label><br>
+      <label><input type="radio" name="q1" value="b"> الإعلانات المدفوعة فقط</label><br>
+      <label><input type="radio" name="q1" value="c"> تحسين محركات البحث</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي من هذه المنصات تُستخدم للإعلانات المدفوعة على الإنترنت؟</p>
+      <label><input type="radio" name="q2" value="a"> Canva</label><br>
+      <label><input type="radio" name="q2" value="b"> Google Ads</label><br>
+      <label><input type="radio" name="q2" value="c"> MailChimp فقط</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- ما الهدف الرئيسي من التسويق عبر البريد الإلكتروني؟</p>
+      <label><input type="radio" name="q3" value="a"> التواصل مع العملاء الحاليين والمحتملين</label><br>
+      <label><input type="radio" name="q3" value="b"> تصميم المواقع فقط</label><br>
+      <label><input type="radio" name="q3" value="c"> إنشاء مقاطع فيديو تسويقية فقط</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- أي من هذه العناصر يُستخدم لتحليل أداء الحملات التسويقية؟</p>
+      <label><input type="radio" name="q4" value="a"> Google Analytics</label><br>
+      <label><input type="radio" name="q4" value="b"> Photoshop</label><br>
+      <label><input type="radio" name="q4" value="c"> Illustrator</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- ما المقصود بالمحتوى العضوي (Organic Content)؟</p>
+      <label><input type="radio" name="q5" value="a"> محتوى مدفوع فقط</label><br>
+      <label><input type="radio" name="q5" value="b"> الصور والفيديوهات فقط</label><br>
+      <label><input type="radio" name="q5" value="c"> المحتوى الذي يظهر في نتائج البحث دون دفع مقابل</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- التسويق عبر وسائل التواصل الاجتماعي يساعد على زيادة الوعي بالعلامة التجارية؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- الإعلانات المدفوعة لا تحتاج إلى ميزانية محددة؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- التسويق الرقمي يشمل فقط التسويق عبر محركات البحث؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- معدل التحويل (Conversion Rate) يُقيس نسبة الزوار الذين يقومون بإجراء مطلوب؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- التسويق بالمحتوى يشمل إنشاء محتوى مفيد وجذاب لجذب العملاء؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان تحليل البيانات -->
+<div id="exam-data-analysis" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- أي من هذه الأدوات تُستخدم بشكل واسع لتحليل البيانات؟</p>
+      <label><input type="radio" name="q1" value="a"> Excel</label><br>
+      <label><input type="radio" name="q1" value="b"> Photoshop</label><br>
+      <label><input type="radio" name="q1" value="c"> Illustrator</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي لغة برمجة تُستخدم بكثرة في تحليل البيانات؟</p>
+      <label><input type="radio" name="q2" value="a"> HTML</label><br>
+      <label><input type="radio" name="q2" value="b"> CSS</label><br>
+      <label><input type="radio" name="q2" value="c"> Python</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- أي من هذه الأدوات تُستخدم لتصور البيانات (Data Visualization)؟</p>
+      <label><input type="radio" name="q3" value="a"> Word</label><br>
+      <label><input type="radio" name="q3" value="b"> Tableau</label><br>
+      <label><input type="radio" name="q3" value="c"> PowerPoint فقط</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- ما المقصود بـ "Big Data"؟</p>
+      <label><input type="radio" name="q4" value="a"> بيانات صغيرة يمكن تحليلها يدوياً</label><br>
+      <label><input type="radio" name="q4" value="b"> بيانات تصميم الجرافيك</label><br>
+      <label><input type="radio" name="q4" value="c"> مجموعة كبيرة ومعقدة من البيانات التي تتطلب أدوات متقدمة للتحليل</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- أي من هذه الخطوات تُعتبر جزءاً من عملية تحليل البيانات؟</p>
+      <label><input type="radio" name="q5" value="a"> إنشاء تصميم رسومي فقط</label><br>
+      <label><input type="radio" name="q5" value="b"> جمع البيانات، تنظيف البيانات، تحليل البيانات</label><br>
+      <label><input type="radio" name="q5" value="c"> كتابة HTML فقط</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- Excel يمكن استخدامه لتحليل البيانات وإنشاء الرسوم البيانية؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- SQL تُستخدم لإدارة واستعلام قواعد البيانات؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- تحليل البيانات لا يشمل تنظيف البيانات قبل التحليل؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- Python تُستخدم فقط لتصميم المواقع ولا علاقة لها بتحليل البيانات؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- تصور البيانات يساعد في فهم البيانات واتخاذ القرارات؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان التصميم ثلاثي الأبعاد -->
+<div id="exam-3d" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- أي من هذه البرامج يُستخدم بشكل أساسي للتصميم ثلاثي الأبعاد؟</p>
+      <label><input type="radio" name="q1" value="a"> Photoshop</label><br>
+      <label><input type="radio" name="q1" value="b"> Blender</label><br>
+      <label><input type="radio" name="q1" value="c"> Illustrator</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي من هذه العمليات يُعتبر جزءاً من النمذجة ثلاثية الأبعاد (3D Modeling)؟</p>
+      <label><input type="radio" name="q2" value="a"> Extrude</label><br>
+      <label><input type="radio" name="q2" value="b"> Crop</label><br>
+      <label><input type="radio" name="q2" value="c"> Merge Cells</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- ما هو الغرض من الـ Texturing في التصميم ثلاثي الأبعاد؟</p>
+      <label><input type="radio" name="q3" value="a"> إنشاء شبكة هندسية فقط</label><br>
+      <label><input type="radio" name="q3" value="b"> التحكم بالإضاءة فقط</label><br>
+      <label><input type="radio" name="q3" value="c"> إضافة مواد وألوان للسطوح</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- أي من هذه العمليات تُستخدم لإضفاء الواقعية على المشهد الثلاثي الأبعاد؟</p>
+      <label><input type="radio" name="q4" value="a"> Lighting & Rendering</label><br>
+      <label><input type="radio" name="q4" value="b"> Cropping</label><br>
+      <label><input type="radio" name="q4" value="c"> Layer Masking</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- أي صيغة ملف تُستخدم عادةً لحفظ نماذج ثلاثية الأبعاد؟</p>
+      <label><input type="radio" name="q5" value="a"> .JPG</label><br>
+      <label><input type="radio" name="q5" value="b"> .OBJ</label><br>
+      <label><input type="radio" name="q5" value="c"> .PNG</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- عملية Rigging تُستخدم لإضافة هيكل عظمي للشخصيات للتحريك؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- Rendering يعني فقط حفظ الملف دون أي تأثير على المظهر النهائي؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- Blender برنامج مجاني ومفتوح المصدر لتصميم 3D؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- Texturing لا يؤثر على واقعية النموذج الثلاثي الأبعاد؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- النمذجة ثلاثية الأبعاد تُستخدم فقط للألعاب ولا علاقة لها بالهندسة أو الأفلام؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+<!-- امتحان ICDL -->
+<div id="exam-icdl" class="exam-box" style="display:none;">
+  <form>
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question">
+      <p>1- أي من هذه البرامج يُستخدم لإنشاء جداول بيانات؟</p>
+      <label><input type="radio" name="q1" value="a"> Microsoft Word</label><br>
+      <label><input type="radio" name="q1" value="b"> Microsoft PowerPoint</label><br>
+      <label><input type="radio" name="q1" value="c"> Microsoft Excel</label><br>
+    </div>
+
+    <div class="question">
+      <p>2- أي من هذه الوظائف تُستخدم لتنسيق النصوص في Word؟</p>
+      <label><input type="radio" name="q2" value="a"> SUM, AVERAGE</label><br>
+      <label><input type="radio" name="q2" value="b"> Bold, Italic, Underline</label><br>
+      <label><input type="radio" name="q2" value="c"> Chart, Graph</label><br>
+    </div>
+
+    <div class="question">
+      <p>3- ما الغرض من Microsoft PowerPoint؟</p>
+      <label><input type="radio" name="q3" value="a"> إنشاء العروض التقديمية</label><br>
+      <label><input type="radio" name="q3" value="b"> إدارة قواعد البيانات</label><br>
+      <label><input type="radio" name="q3" value="c"> تصميم الجرافيك فقط</label><br>
+    </div>
+
+    <div class="question">
+      <p>4- أي من هذه المصطلحات يرتبط بالشبكات في ICDL؟</p>
+      <label><input type="radio" name="q4" value="a"> Slide Transition</label><br>
+      <label><input type="radio" name="q4" value="b"> Pivot Table</label><br>
+      <label><input type="radio" name="q4" value="c"> IP Address</label><br>
+    </div>
+
+    <div class="question">
+      <p>5- أي من هذه الصيغ تُستخدم لحساب المتوسط في Excel؟</p>
+      <label><input type="radio" name="q5" value="a"> =SUM()</label><br>
+      <label><input type="radio" name="q5" value="b"> =AVERAGE()</label><br>
+      <label><input type="radio" name="q5" value="c"> =COUNT()</label><br>
+    </div>
+
+    <!-- أسئلة صح أو خطأ -->
+    <div class="question">
+      <p>6- يمكن إدراج صور في Word وPowerPoint. ؟</p>
+      <label><input type="radio" name="q6" value="true"> True</label><br>
+      <label><input type="radio" name="q6" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>7- Excel لا يمكنه إنشاء مخططات بيانية؟</p>
+      <label><input type="radio" name="q7" value="true"> True</label><br>
+      <label><input type="radio" name="q7" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>8- الإنترنت جزء أساسي من مهارات ICDL؟</p>
+      <label><input type="radio" name="q8" value="true"> True</label><br>
+      <label><input type="radio" name="q8" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>9- PowerPoint يُستخدم فقط لتحرير النصوص؟</p>
+      <label><input type="radio" name="q9" value="true"> True</label><br>
+      <label><input type="radio" name="q9" value="false"> False</label><br>
+    </div>
+
+    <div class="question">
+      <p>10- الحماية بكلمة مرور على المستندات جزء من مهارات ICDL؟</p>
+      <label><input type="radio" name="q10" value="true"> True</label><br>
+      <label><input type="radio" name="q10" value="false"> False</label><br>
+    </div>
+  </form>
+</div>
+
+  <!-- زر تسليم الامتحان -->
+  <div style="text-align:center; margin-top:20px;">
+    <button type="button" id="submit-exam-btn" class="btn primary-btn">
+      تسليم الامتحان  
+    </button>
+  </div>
+
+</div>
+
+<!-- زر عرض النتيجة خارج صفحة الامتحان -->
+<div style="text-align:center; margin-top:20px;">  
+  <button type="button" id="view-result-btn" class="btn primary-btn" style="display:none;">  
+    عرض النتيجة  
+  </button>  
+</div>
+</section> 
+ <footer>  
+    <p>تنوير  - جميع الحقوق محفوظة © 2026</p>  
+</footer> 
+   <script src="js/script.js"></script> 
+ </body>  
+</html>
